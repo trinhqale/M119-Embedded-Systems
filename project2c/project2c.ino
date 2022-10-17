@@ -74,12 +74,22 @@ void loop() {
   // 
   if (central && IMU.accelerationAvailable() && IMU.gyroscopeAvailable()) 
   {
-    IMU.readAcceleration(ax, ay, az);
-    // IMU.readGyroscope(gx, gy, gz);
+    
     while(central.connected()){
+      IMU.readAcceleration(ax, ay, az);
+    // IMU.readGyroscope(gx, gy, gz);
+      Serial.print("ax: ");
+      Serial.print(ax);
+      Serial.print(", ay: ");
+      Serial.print(ay);
+      Serial.print(", az: ");
+      Serial.print(az);
       accelerometerCharacteristicX.writeValue(ax);
       accelerometerCharacteristicY.writeValue(ay);
       accelerometerCharacteristicZ.writeValue(az);
+      
+      Serial.println();
+      Serial.println();
       delay(100);
     }
     Serial.print(F("Disconnected from central: "));
