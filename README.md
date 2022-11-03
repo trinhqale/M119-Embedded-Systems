@@ -2,12 +2,10 @@
 
 For submission purpose. 
 
-Mini-project 1 is not included.
 
-## Mini Project 2 ##
-2a: use the sample code to read wifi RSSI.
-
-2b: Use the sample code to control LED light with phone (iphone 8 and Light Blue app).
-
-2c: from previous examples, write code to transfer data from IMU to the phone using BLE.
-
+## Mini Project 3 ##
+Use the code from Project 2c plus nodejs framework to display visualization of the IMU data from IoT Nano 33. I'm having a bit of issue to upload the setup folders but all the changes are in central.js and index.ejs for grading purpose.
+The background color of the browser on 127.0.0.1:3000 will change depend on which direction we're changing. 
+Red for ax
+Green for ay 
+Blue for az 
